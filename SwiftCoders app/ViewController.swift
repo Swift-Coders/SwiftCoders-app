@@ -12,7 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        MeetupAPI.getGroups { (groups) in
+            groups.forEach {
+                MeetupAPI.getEvent(group: $0) { events in
+                    print(events)
+                }
+            }
+        }
     }
 
 
