@@ -40,7 +40,7 @@ struct MeetupAPI {
         get(endpoint: "/self/groups", completion: completion)
     }
 
-    static func getEvent(group: MeetupGroup, completion: @escaping ([EventGroup]) -> Void) {
+    static func getEvent(group: MeetupGroup, completion: @escaping ([MeetupEvent]) -> Void) {
         get(endpoint: "/\(group.urlname)/events", completion: completion)
     }
 }
