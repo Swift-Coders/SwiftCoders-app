@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct MeetupGroup: Codable, Hashable {
     let name: String
@@ -29,7 +30,7 @@ struct MeetupEvent: Codable {
     let localTime: String
     let venue: Venue
 
-    struct Venue: Codable {
+    class Venue: NSObject, Codable {
         let name: String
         let lat: Double
         let lon: Double
@@ -37,5 +38,24 @@ struct MeetupEvent: Codable {
         let city: String
         let state: String
         let zip: String
+    }
+}
+
+struct EventData {
+    var group: MeetupGroup
+    var event: MeetupEvent
+}
+
+extension MeetupEvent.Venue: MKAnnotation {
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: lat, longitude: lon)
+    }
+
+    var title: String? {
+        return name
+    }
+
+    var subtitle: String? {
+        return address1
     }
 }

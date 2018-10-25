@@ -32,12 +32,12 @@ final class EventsViewController: UITableViewController {
             eventsArray = []
             for (group, events) in events {
                 for event in events {
-                    eventsArray.append((group, event))
+                    eventsArray.append(EventData(group: group, event: event))
                 }
             }
         }
     }
-    private var eventsArray: [(group: MeetupGroup, event: MeetupEvent)] = []
+    private var eventsArray: [EventData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,16 @@ final class EventsViewController: UITableViewController {
             OperationQueue.main.addOperation {
                 self.tableView.reloadData()
             }
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let eventVC = segue.destination as? EventDetailsViewController,
+            let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell) {
+
+            let object = eventsArray[indexPath.row]
+            eventVC.object = object
         }
     }
 
@@ -61,6 +71,12 @@ final class EventsViewController: UITableViewController {
 
         return cell
     }
+
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = storyboard!.instantiateViewController(withIdentifier: "EventDetailsViewController") as! EventDetailsViewController
+        viewController.object = eventsArray[indexPath.row]
+        show(viewController, sender: nil)
+    }*/
 }
 
 final class EventCell: UITableViewCell {
@@ -70,9 +86,10 @@ final class EventCell: UITableViewCell {
 }
 
 private extension EventCell {
-    func configure(model: (group: MeetupGroup, event: MeetupEvent)) {
+    func configure(model: EventData) {
         groupNameLabel.text = model.group.name
         eventNameLabel.text = model.event.name
         dateNameLabel.text = model.event.localDate + " " + model.event.localTime
     }
 }
+
