@@ -25,6 +25,7 @@ struct MeetupGroup: Codable, Hashable {
 struct MeetupEvent: Codable {
     let name: String
     let status: String
+    let description: String
     let yesRsvpCount: Int
     let localDate: String
     let localTime: String
