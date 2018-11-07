@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - BEMCheckBox (1.4.1)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
@@ -8,19 +9,22 @@ PODS:
   - Result (3.2.4)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - Moya
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - BEMCheckBox
     - Moya
     - Result
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
-PODFILE CHECKSUM: e3e099a1e4f7b71edc0e44470c22a4cd8044e6fd
+PODFILE CHECKSUM: 12f570c50611d025a60f4ff4b7a39355bbbc5e61
 
 COCOAPODS: 1.5.3

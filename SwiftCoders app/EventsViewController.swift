@@ -25,6 +25,7 @@ final class EventsViewController: UITableViewController {
             }
         }
     }
+    
 
     typealias Events = [MeetupGroup: [MeetupEvent]]
     private var events: Events = [:] {
@@ -41,14 +42,27 @@ final class EventsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        // removed back text on nav bar
+        let emptyBackButton = UIBarButtonItem(title: "", style: .plain, target: navigationController, action: nil)
+        navigationItem.backBarButtonItem = emptyBackButton
+        
+        tableView.separatorStyle = .none
+        tableView.tableFooterView = UIView()
+        //remove lines on the tableView
+        
         loadEvents { events in
             self.events = events
             OperationQueue.main.addOperation {
                 self.tableView.reloadData()
             }
         }
+        
     }
 
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let eventVC = segue.destination as? EventDetailsViewController,
             let cell = sender as? UITableViewCell,
@@ -89,7 +103,22 @@ private extension EventCell {
     func configure(model: EventData) {
         groupNameLabel.text = model.group.name
         eventNameLabel.text = model.event.name
-        dateNameLabel.text = model.event.localDate + " " + model.event.localTime
+        
+        let date = model.event.localDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        guard let startDate = dateFormatter.date(from: date) else { return }
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.dateFormat = "MMMM d, yyyy"
+        
+        let newDate = dateFormatter.string(from: startDate)
+        
+        dateNameLabel.text = newDate
     }
+    
 }
 

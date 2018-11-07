@@ -4,6 +4,7 @@ target 'SwiftCoders app' do
   use_frameworks!
 
   pod 'Moya'
+  pod 'BEMCheckBox'
 
   target 'SwiftCoders appTests' do
     inherit! :search_paths

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KW7-37-S6o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KW7-37-S6o">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Events View Controller-->
+        <!--SwiftCodersLA( )-->
         <scene sceneID="kbH-e6-nq2">
             <objects>
                 <tableViewController id="Yk2-1B-BZS" customClass="EventsViewController" customModule="SwiftCoders_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="Yk2-1B-BZS" id="DWy-jv-BBZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="L4G-yE-XA4"/>
+                    <navigationItem key="navigationItem" title="SwiftCodersLA( )" id="L4G-yE-XA4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIJ-6H-AXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,30 +85,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l40-gE-UEZ">
-                                <rect key="frame" x="20" y="108" width="374" height="240.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="l40-gE-UEZ">
+                                <rect key="frame" x="20" y="108" width="374" height="288.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gfd-2E-e5T">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gfd-2E-e5T">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJ4-lS-L6J">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJ4-lS-L6J">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjO-3i-8JZ">
-                                                <rect key="frame" x="195" y="0.0" width="179" height="20.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjO-3i-8JZ">
+                                                <rect key="frame" x="192" y="0.0" width="182" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NJD-3Y-6Uy">
-                                        <rect key="frame" x="0.0" y="40.5" width="374" height="200"/>
+                                        <rect key="frame" x="0.0" y="38.5" width="374" height="250"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="nfh-Um-PiB"/>
+                                            <constraint firstAttribute="height" constant="250" id="nfh-Um-PiB"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="delegate" destination="Ik4-c1-E9S" id="ucE-wj-M0J"/>
@@ -116,26 +116,82 @@
                                     </mapView>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" editable="NO" text="Description" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nhc-De-wET">
+                                <rect key="frame" x="20" y="436" width="374" height="380"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="ugf-4T-mdK"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBE-3s-pNN">
+                                <rect key="frame" x="20" y="815" width="374" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.62752389900000005" blue="0.92487046630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add to Calendar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCalendarEvent:" destination="Ik4-c1-E9S" eventType="touchUpInside" id="be6-cl-l5m"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVY-Qy-dX2">
+                                <rect key="frame" x="20" y="406.5" width="110" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="HKg-Bg-rkm" customClass="BEMCheckBox">
+                                <rect key="frame" x="157" y="577" width="100" height="99"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="l40-gE-UEZ" firstAttribute="leading" secondItem="N2g-ZW-gRN" secondAttribute="leadingMargin" id="3CV-ha-Rzo"/>
+                            <constraint firstItem="vVY-Qy-dX2" firstAttribute="leading" secondItem="ZDc-X6-lUO" secondAttribute="leading" constant="20" id="3bz-HX-zlu"/>
+                            <constraint firstItem="ZDc-X6-lUO" firstAttribute="trailing" secondItem="nhc-De-wET" secondAttribute="trailing" constant="20" id="64k-EB-CkT"/>
+                            <constraint firstItem="ZDc-X6-lUO" firstAttribute="trailing" secondItem="iBE-3s-pNN" secondAttribute="trailing" constant="20" id="7na-Em-9nw"/>
+                            <constraint firstItem="vVY-Qy-dX2" firstAttribute="top" secondItem="l40-gE-UEZ" secondAttribute="bottom" constant="10" id="B0Q-CJ-889"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l40-gE-UEZ" secondAttribute="trailing" id="RVp-ce-OtQ"/>
                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="l40-gE-UEZ" secondAttribute="bottom" id="TKA-f8-67X"/>
+                            <constraint firstItem="ZDc-X6-lUO" firstAttribute="trailing" secondItem="vVY-Qy-dX2" secondAttribute="trailing" constant="284" id="ZaT-Fw-iFV"/>
+                            <constraint firstItem="nhc-De-wET" firstAttribute="top" secondItem="vVY-Qy-dX2" secondAttribute="bottom" constant="10" id="cxD-dM-0gf"/>
+                            <constraint firstItem="HKg-Bg-rkm" firstAttribute="centerY" secondItem="nhc-De-wET" secondAttribute="centerY" id="dHW-Jf-nUV"/>
                             <constraint firstItem="l40-gE-UEZ" firstAttribute="top" secondItem="N2g-ZW-gRN" secondAttribute="topMargin" id="dSM-Re-kA2"/>
+                            <constraint firstItem="iBE-3s-pNN" firstAttribute="top" secondItem="nhc-De-wET" secondAttribute="bottom" constant="10" id="f5k-6r-b3u"/>
+                            <constraint firstItem="iBE-3s-pNN" firstAttribute="leading" secondItem="ZDc-X6-lUO" secondAttribute="leading" constant="20" id="hyh-76-Ii5"/>
+                            <constraint firstItem="nhc-De-wET" firstAttribute="leading" secondItem="ZDc-X6-lUO" secondAttribute="leading" constant="20" id="jBM-LT-Ay5"/>
+                            <constraint firstItem="iBE-3s-pNN" firstAttribute="bottom" secondItem="ZDc-X6-lUO" secondAttribute="bottom" id="liI-AR-9Hh"/>
+                            <constraint firstItem="HKg-Bg-rkm" firstAttribute="centerX" secondItem="nhc-De-wET" secondAttribute="centerX" id="wu2-Wx-GjK"/>
                         </constraints>
                         <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="20" trailing="20"/>
                         <viewLayoutGuide key="safeArea" id="ZDc-X6-lUO"/>
                     </view>
                     <connections>
+                        <outlet property="calendarButton" destination="iBE-3s-pNN" id="9N5-q2-2tg"/>
+                        <outlet property="checkmarkAnimation" destination="HKg-Bg-rkm" id="Zd5-AT-OoL"/>
                         <outlet property="dateNameLabel" destination="hjO-3i-8JZ" id="7TJ-hT-lXO"/>
                         <outlet property="groupNameLabel" destination="OJ4-lS-L6J" id="kp6-PF-MSM"/>
                         <outlet property="mapView" destination="NJD-3Y-6Uy" id="c8f-wq-FgV"/>
+                        <outlet property="textView" destination="nhc-De-wET" id="8vE-Mo-AdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4x-sI-log" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="21"/>
+            <point key="canvasLocation" x="1705.7971014492755" y="20.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8jz-3F-W5g">
@@ -145,6 +201,16 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3e0-pt-OXd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
